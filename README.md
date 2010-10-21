@@ -2,7 +2,7 @@ Zen Coding NetBeans plugin
 ==========================
 
 Provide simple Zen code expanding in NetBeans.
-Download plugin here: [org-lorenzos-zencoding.nbm](http://github.com/lorenzos/Zen-Coding-NetBeans-plugin/raw/master/build/org-lorenzos-zencoding.nbm)
+Download plugin here: [org-lorenzos-zencoding.nbm](http://github.com/downloads/lorenzos/Zen-Coding-NetBeans-plugin/org-lorenzos-zencoding.zip)
 
 ![Screenshot](http://github.com/lorenzos/Zen-Coding-NetBeans-plugin/raw/master/graphics/screenshot.png)
 
