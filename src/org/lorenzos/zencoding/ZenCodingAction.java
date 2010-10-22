@@ -26,4 +26,5 @@ public final class ZenCodingAction implements ActionListener {
 			Exceptions.printStackTrace(ex);
 		}
 	}
+
 }
