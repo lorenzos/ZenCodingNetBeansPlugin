@@ -728,7 +728,8 @@ var zen_settings = {
  * @link http://chikuyonok.ru
  * @include "settings.js"
  * @include "/EclipseMonkey/scripts/monkey-doc.js"
- */var zen_coding = (function(){
+ */
+var zen_coding = (function(){
 	
 	var re_tag = /<\/?[\w:\-]+(?:\s+[\w\-:]+(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*\s*(\/?)>$/;
 	
@@ -988,7 +989,8 @@ var zen_settings = {
 		
 		// add default attributes
 		if (this._abbr && this._abbr.value.attributes) {
-			var def_attrs = this._abbr.value.attributes;			if (def_attrs) {
+			var def_attrs = this._abbr.value.attributes;
+			if (def_attrs) {
 				for (var i = 0; i < def_attrs.length; i++) {
 					var attr = def_attrs[i];
 					this.addAttribute(attr.name, attr.value);
@@ -3211,7 +3213,8 @@ zen_coding.registerAction('encode_decode_data_url', encodeDecodeBase64);
 /**
  * @author Sergey Chikuyonok (serge.che@gmail.com)
  * @link http://chikuyonok.ru
- */(function(){
+ */
+(function(){
 	// Regular Expressions for parsing tags and attributes
 	var start_tag = /^<([\w\:\-]+)((?:\s+[\w\-:]+(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/,
 		end_tag = /^<\/([\w\:\-]+)[^>]*>/,
@@ -3510,7 +3513,8 @@ zen_coding.registerAction('encode_decode_data_url', encodeDecodeBase64);
  * Comment important tags (with 'id' and 'class' attributes)
  * @author Sergey Chikuyonok (serge.che@gmail.com)
  * @link http://chikuyonok.ru
- */(function(){
+ */
+(function(){
 	/**
 	 * Add comments to tag
 	 * @param {ZenNode} node
@@ -3557,7 +3561,8 @@ zen_coding.registerAction('encode_decode_data_url', encodeDecodeBase64);
  * Filter for escaping unsafe XML characters: <, >, &
  * @author Sergey Chikuyonok (serge.che@gmail.com)
  * @link http://chikuyonok.ru
- */(function(){
+ */
+(function(){
 	var char_map = {
 		'<': '&lt;',
 		'>': '&gt;',
@@ -3590,7 +3595,8 @@ zen_coding.registerAction('encode_decode_data_url', encodeDecodeBase64);
  * padding:0; → padding: 0;
  * @author Sergey Chikuyonok (serge.che@gmail.com)
  * @link http://chikuyonok.ru
- */(function(){
+ */
+(function(){
 	function process(tree, profile) {
 		for (var i = 0, il = tree.children.length; i < il; i++) {
 			/** @type {ZenNode} */
@@ -3618,7 +3624,8 @@ zen_coding.registerAction('encode_decode_data_url', encodeDecodeBase64);
  * @link http://chikuyonok.ru
  * 
  * @include "../zen_coding.js"
- */(function(){
+ */
+(function(){
 	var child_token = '${child}',
 		placeholder = '%s';
 	
@@ -4114,7 +4121,8 @@ zen_coding.registerAction('encode_decode_data_url', encodeDecodeBase64);
  * child elements
  * @author Sergey Chikuyonok (serge.che@gmail.com)
  * @link http://chikuyonok.ru
- */(function(){
+ */
+(function(){
 	var tags = {
 		'xsl:variable': 1,
 		'xsl:with-param': 1

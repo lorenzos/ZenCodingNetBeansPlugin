@@ -8,6 +8,7 @@ import javax.swing.text.JTextComponent;
 import org.lorenzos.utils.EditorUtilities;
 import org.lorenzos.utils.OutputUtils;
 import org.openide.cookies.EditorCookie;
+import org.openide.util.Exceptions;
 import ru.zencoding.IZenEditor;
 import ru.zencoding.SelectionData;
 
@@ -15,6 +16,7 @@ public class ZenEditor implements IZenEditor {
 
 	private JTextComponent textComp;
 	private Document doc;
+	private String contentType;
 
 	private int caretPosition;
 	private int lineStart;
@@ -28,7 +30,10 @@ public class ZenEditor implements IZenEditor {
 	}
 
 	public static ZenEditor create(EditorCookie context) throws ZenEditorException {
-		for (JEditorPane pane : context.getOpenedPanes()) return new ZenEditor(pane);
+		for (JEditorPane pane : context.getOpenedPanes()) {
+			ZenEditor n = new ZenEditor(pane);
+			n.contentType = pane.getContentType();
+			return n; }
 		throw new ZenEditorException();
 	}
 
@@ -86,7 +91,7 @@ public class ZenEditor implements IZenEditor {
 	@Override
 	public void replaceContent(String value, int start, int end) {
 		try {
-			value = EditorUtilities.stringIndent(value).trim();
+			value = EditorUtilities.stringIndent(value, this.getIndentation()).trim();
 			int placeholderPosition = value.length();
 			if (value.contains(ZenEditor.caretPlaceholder)) {
 				placeholderPosition = value.indexOf(ZenEditor.caretPlaceholder);
@@ -101,16 +106,23 @@ public class ZenEditor implements IZenEditor {
 
 	@Override
 	public String getContent() {
-		return this.textComp.getText();
+		try {
+			return this.doc.getText(0, this.doc.getLength());
+		} catch (BadLocationException ex) {
+			ex.printStackTrace(OutputUtils.getErrorStream());
+			return "";
+		}
 	}
 
 	@Override
 	public String getSyntax() {
+		if (this.contentType != null) if (this.contentType.equals("text/x-css")) return "css";
 		return "html";
 	}
 
 	@Override
 	public String getProfileName() {
+		if (this.contentType != null) if (this.contentType.equals("text/x-css")) return "css";
 		return "xhtml";
 	}
 
@@ -134,7 +146,7 @@ public class ZenEditor implements IZenEditor {
 		try {
 
 			doc = textComp.getDocument();
-			caretPosition = textComp.getCaret().getDot();
+			caretPosition = textComp.getCaretPosition();
 			lineStart = caretPosition;
 			lineEnd = caretPosition;
 			String cTemp;
@@ -142,9 +154,9 @@ public class ZenEditor implements IZenEditor {
 			// Search for line start
 			if (lineStart > 0) {
 				cTemp = doc.getText(lineStart - 1, 1);
-				while (!cTemp.equals("\n") && !cTemp.equals("\r")) {
+				while (!cTemp.equals("\n") && !cTemp.equals("\r") && (lineStart > 0)) {
 					lineStart--;
-					cTemp = doc.getText(lineStart - 1, 1);
+					if (lineStart > 0) cTemp = doc.getText(lineStart - 1, 1);
 				}
 			}
 
