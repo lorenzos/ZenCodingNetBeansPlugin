@@ -7,7 +7,7 @@ Provide full support to HTML Zen code expanding in NetBeans.
 
 ![Screenshot](http://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/screenshot.png)
 
-Read more about Zen Coding sintax:
+Read more about Zen Coding:
 
 - [Zen Coding homepage](http://code.google.com/p/zen-coding/)
 - [Current features of abbreviation engine](http://code.google.com/p/zen-coding/#Current_features_of_abbreviation_engine)
