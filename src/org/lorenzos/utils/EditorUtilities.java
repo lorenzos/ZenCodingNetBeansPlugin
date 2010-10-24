@@ -1,5 +1,5 @@
 
-package org.lorenzos.editor;
+package org.lorenzos.utils;
 
 import javax.swing.JEditorPane;
 import javax.swing.text.BadLocationException;

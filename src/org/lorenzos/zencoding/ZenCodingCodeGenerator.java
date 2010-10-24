@@ -4,11 +4,10 @@ package org.lorenzos.zencoding;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.text.JTextComponent;
-import org.lorenzos.zencoding.zenexpander.ZenCodingExpander;
-import org.lorenzos.editor.*;
+import org.lorenzos.utils.*;
 import org.netbeans.spi.editor.codegen.CodeGenerator;
-import org.openide.util.Exceptions;
 import org.openide.util.Lookup;
+import ru.zencoding.JSExecutor;
 
 public class ZenCodingCodeGenerator implements CodeGenerator {
 
@@ -33,11 +32,11 @@ public class ZenCodingCodeGenerator implements CodeGenerator {
 	@Override
 	public void invoke() {
 		try {
-			EditorUtilities e = EditorUtilities.create(textComp);
-			String expandedZenCode = new ZenCodingExpander(e.getLine()).parse();
-			e.replaceLine(EditorUtilities.stringIndent(expandedZenCode, e.getIndentation()));
-		} catch (EditorUtilitiesException ex) {
-			Exceptions.printStackTrace(ex);
+			JSExecutor jsRunner = JSExecutor.getSingleton();
+			ZenEditor editor = ZenEditor.create(textComp);
+			jsRunner.runAction(editor, "expand_abbreviation");
+		} catch (Exception ex) {
+			ex.printStackTrace(OutputUtils.getErrorStream());
 		}
 	}
 }

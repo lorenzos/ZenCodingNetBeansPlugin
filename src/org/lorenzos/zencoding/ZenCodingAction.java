@@ -3,10 +3,9 @@ package org.lorenzos.zencoding;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import org.lorenzos.zencoding.zenexpander.ZenCodingExpander;
-import org.lorenzos.editor.*;
+import org.lorenzos.utils.*;
 import org.openide.cookies.EditorCookie;
-import org.openide.util.Exceptions;
+import ru.zencoding.JSExecutor;
 
 public final class ZenCodingAction implements ActionListener {
 
@@ -19,11 +18,11 @@ public final class ZenCodingAction implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent ev) {
 		try {
-			EditorUtilities e = EditorUtilities.create(context);
-			String expandedZenCode = new ZenCodingExpander(e.getLine()).parse();
-			e.replaceLine(EditorUtilities.stringIndent(expandedZenCode, e.getIndentation()));
-		} catch (EditorUtilitiesException ex) {
-			Exceptions.printStackTrace(ex);
+			JSExecutor jsRunner = JSExecutor.getSingleton();
+			ZenEditor editor = ZenEditor.create(context);
+			jsRunner.runAction(editor, "expand_abbreviation");
+		} catch (Exception ex) {
+			ex.printStackTrace(OutputUtils.getErrorStream());
 		}
 	}
 

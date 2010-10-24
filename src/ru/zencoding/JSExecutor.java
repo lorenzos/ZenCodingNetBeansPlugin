@@ -1,10 +1,10 @@
 package ru.zencoding;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import org.lorenzos.utils.OutputUtils;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Function;
@@ -14,7 +14,7 @@ public class JSExecutor {
 	private volatile static JSExecutor singleton;
 	private Context cx;
 	private Scriptable scope;
-	private FileReader fReader;
+	private Reader fReader;
 	private boolean inited = false; 
 	private String fileName = "zencoding.js";
 
@@ -22,16 +22,15 @@ public class JSExecutor {
 		inited = false;
 		cx = Context.enter();
 		scope = cx.initStandardObjects();
-		FileReader input = getJSInput();
+		Reader input = getJSInput();
 		if (input != null) {
 			try {
 				cx.evaluateReader(scope, getJSInput(), getFilename(), 1, null);
 				inited = true;
 			} catch (IOException e) {
-				e.printStackTrace();
+				e.getMessage();
 			}
 		}
-		
 	}
 
 	public static JSExecutor getSingleton() {
@@ -44,25 +43,18 @@ public class JSExecutor {
 		return singleton;
 	}
 	
-	public String getFilename() {
+	private String getFilename() {
 		return fileName;
 	}
 	
-	public FileReader getJSInput() {
+	private Reader getJSInput() {
 		if (fReader == null) {
-			File f;
-			try {
-				f = new File( this.getClass().getResource("/" + getFilename()).toURI() );
-				fReader = new FileReader(f);
-			} catch (URISyntaxException e) {
-				e.printStackTrace();
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
+			InputStream is = this.getClass().getResourceAsStream(this.getFilename());
+			fReader = new InputStreamReader(is);
 		}
-		
 		return fReader;
 	}
+
 	
 	public boolean isInited() {
 		return inited;
