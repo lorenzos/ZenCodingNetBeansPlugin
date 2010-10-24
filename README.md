@@ -2,11 +2,12 @@ Zen Coding NetBeans plugin
 ==========================
  
 Provide full support to HTML Zen code expanding in NetBeans.
-Download plugin here: **(http://github.com/downloads/lorenzos/ZenCodingNetBeansPlugin/org-lorenzos-zencoding.zip)**
+Download plugin here: ** (http://github.com/downloads/lorenzos/ZenCodingNetBeansPlugin/org-lorenzos-zencoding.zip) **
 
 ![Screenshot](http://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/screenshot.png)
 
 Read more about Zen Coding sintax:
+
 - [Zen Coding homepage](http://code.google.com/p/zen-coding/)
 - [Current features of abbreviation engine](http://code.google.com/p/zen-coding/#Current_features_of_abbreviation_engine)
 - [Selectors syntax](http://code.google.com/p/zen-coding/wiki/ZenHTMLSelectorsEn)
