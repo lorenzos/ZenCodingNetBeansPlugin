@@ -28,6 +28,7 @@ public final class ZenCodingMatchPair implements ActionListener {
 				JSExecutor jsRunner = JSExecutor.getSingleton();
 				ZenEditor editor = ZenEditor.create(editorCookie);
 				jsRunner.runAction(editor, "match_pair");
+				editor.restoreInitialScrollingPosition();
 			} catch (Exception ex) {
 				ex.printStackTrace(OutputUtils.getErrorStream());
 			}

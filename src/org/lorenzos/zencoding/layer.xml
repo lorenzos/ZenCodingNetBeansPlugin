@@ -2,7 +2,7 @@
 <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
 <filesystem>
     <folder name="Actions">
-        <folder name="Edit">
+        <folder name="XML">
             <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance">
                 <attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
                 <attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingExpandAbbreviation"/>
@@ -40,21 +40,29 @@
                 <attr name="position" intvalue="2375"/>
             </file>
             <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.shadow">
-                <attr name="originalFile" stringvalue="Actions/Edit/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
+                <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
                 <attr name="position" intvalue="2350"/>
             </file>
             <file name="org-lorenzos-zencoding-actions-ZenCodingMatchPair.shadow">
-                <attr name="originalFile" stringvalue="Actions/Edit/org-lorenzos-zencoding-actions-ZenCodingMatchPair.instance"/>
+                <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingMatchPair.instance"/>
                 <attr name="position" intvalue="2362"/>
             </file>
         </folder>
-    </folder>
+        </folder>
     <folder name="Toolbars">
         <folder name="Clipboard">
             <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.shadow">
-                <attr name="originalFile" stringvalue="Actions/Edit/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
+                <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
                 <attr name="position" intvalue="400"/>
             </file>
         </folder>
+    </folder>
+	<folder name="Shortcuts">
+        <file name="D-COMMA.shadow">
+            <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
+        </file>
+        <file name="D-O-M.shadow">
+            <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingMatchPair.instance"/>
+        </file>
     </folder>
 </filesystem>

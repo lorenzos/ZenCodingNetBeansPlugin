@@ -36,6 +36,7 @@ public class ZenCodingCodeGenerator implements CodeGenerator {
 			JSExecutor jsRunner = JSExecutor.getSingleton();
 			ZenEditor editor = ZenEditor.create(textComp);
 			jsRunner.runAction(editor, "expand_abbreviation");
+			editor.restoreInitialScrollingPosition();
 		} catch (Exception ex) {
 			ex.printStackTrace(OutputUtils.getErrorStream());
 		}

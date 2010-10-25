@@ -1,6 +1,7 @@
 
 package org.lorenzos.zencoding.actions;
 
+import java.awt.Rectangle;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public final class ZenCodingExpandAbbreviation implements ActionListener {
 				JSExecutor jsRunner = JSExecutor.getSingleton();
 				ZenEditor editor = ZenEditor.create(editorCookie);
 				jsRunner.runAction(editor, "expand_abbreviation");
+				editor.restoreInitialScrollingPosition();
 			} catch (Exception ex) {
 				ex.printStackTrace(OutputUtils.getErrorStream());
 			}

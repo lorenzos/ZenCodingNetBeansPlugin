@@ -1,6 +1,7 @@
 
 package org.lorenzos.zencoding.zeneditor;
 
+import java.awt.Rectangle;
 import javax.swing.JEditorPane;
 import javax.swing.JOptionPane;
 import javax.swing.text.BadLocationException;
@@ -19,6 +20,8 @@ public class ZenEditor implements IZenEditor {
 	private Document doc;
 	private String contentType;
 
+	private Rectangle initialScrollingPosition;
+
 	private int caretPosition;
 	private int lineStart;
 	private int lineEnd;
@@ -27,6 +30,7 @@ public class ZenEditor implements IZenEditor {
 
 	private ZenEditor(JTextComponent textComp) throws ZenEditorException {
 		this.textComp = textComp;
+		this.initialScrollingPosition = textComp.getVisibleRect();
 		this.setup();
 	}
 
@@ -207,6 +211,10 @@ public class ZenEditor implements IZenEditor {
 		int i = 0;
 		while (Character.isWhitespace(line.charAt(i))) ws += line.charAt(i++);
 		return ws;
+	}
+
+	public void restoreInitialScrollingPosition() {
+		textComp.scrollRectToVisible(initialScrollingPosition);
 	}
 
 }

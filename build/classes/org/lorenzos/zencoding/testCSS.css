@@ -1,17 +1,6 @@
-/* 
-    Document   : newCascadeStyleSheet
-    Created on : 25-ott-2010, 12.55.53
-    Author     : Lorenzo
-    Description:
-        Purpose of the stylesheet follows.
-*/
-
-/* 
-   TODO customize this sample style
-   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
-*/
 
 root { 
     display: block;
+	position:relative;
 }
 

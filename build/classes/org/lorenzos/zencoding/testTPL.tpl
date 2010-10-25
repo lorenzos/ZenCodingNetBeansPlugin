@@ -5,15 +5,6 @@
 	<title></title>
 </head>
 <body>
-	<div id="header">
-		<div id="logo"></div>
-		<ul id="nav">
-			<li class="item-1"><a href=""></a></li>
-			<li class="item-2"><a href=""></a></li>
-			<li class="item-3"><a href=""></a></li>
-			<li class="item-4"><a href=""></a></li>
-			<li class="item-5"><a href=""></a></li>
-		</ul>
-	</div>
+	
 </body>
 </html>
