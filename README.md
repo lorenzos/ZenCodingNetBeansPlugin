@@ -19,7 +19,7 @@ Installation
 
 1. **Download** zipped plugin **[here](http://github.com/downloads/lorenzos/ZenCodingNetBeansPlugin/org-lorenzos-zencoding-0.4.zip)** and unpack it.
 2. Open NetBeans (>=6.9.1) and go to *Tools > Plugins*.
-3. Select tab *Downloaded*, click *Add plugins...* and search for downloaded 'nbm' file.
+3. Select tab *Downloaded*, click *Add plugins...* and search for downloaded <tt>nbm</tt> file.
 4. Click *Install* button, follow instructions and restart NetBeans IDE.
 
 About Zen Coding
