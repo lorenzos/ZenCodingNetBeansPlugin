@@ -1,5 +1,5 @@
 
-package org.lorenzos.zencoding;
+package org.lorenzos.zencoding.zeneditor;
 
 public class ZenEditorException extends Exception {
 

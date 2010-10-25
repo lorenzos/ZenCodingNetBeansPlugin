@@ -2,15 +2,24 @@
 <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
 <filesystem>
     <folder name="Actions">
-        <folder name="XML">
-            <file name="org-lorenzos-zencoding-ZenCodingAction.instance">
+        <folder name="Edit">
+            <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance">
                 <attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
-                <attr name="displayName" bundlevalue="org.lorenzos.zencoding.Bundle#CTL_ZenCodingAction"/>
-                <attr name="iconBase" stringvalue="org/lorenzos/zencoding/icon16.png"/>
-                <attr name="injectable" stringvalue="org.lorenzos.zencoding.ZenCodingAction"/>
+                <attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingExpandAbbreviation"/>
+                <attr name="iconBase" stringvalue="org/lorenzos/zencoding/actions/icon16.png"/>
+                <attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingExpandAbbreviation"/>
                 <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
                 <attr name="noIconInMenu" boolvalue="false"/>
-                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr name="selectionType" stringvalue="ANY"/>
+                <attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+            </file>
+            <file name="org-lorenzos-zencoding-actions-ZenCodingMatchPair.instance">
+                <attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+                <attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingMatchPair"/>
+                <attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingMatchPair"/>
+                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+                <attr name="noIconInMenu" boolvalue="false"/>
+                <attr name="selectionType" stringvalue="ANY"/>
                 <attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
             </file>
         </folder>
@@ -19,27 +28,31 @@
         <folder name="text">
             <folder name="html">
                 <folder name="CodeGenerators">
-                    <file name="org-lorenzos-zencoding-ZenCodingCodeGenerator$Factory.instance"/>
+                    <file name="org-lorenzos-zencoding-codegenerators-ZenCodingCodeGenerator$Factory.instance"/>
                 </folder>
             </folder>
         </folder>
     </folder>
     <folder name="Menu">
-        <folder name="Source">
-            <file name="org-lorenzos-zencoding-ZenCodingAction-separatorBefore.instance">
+        <folder name="Edit">
+            <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation-separatorAfter.instance">
                 <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
-                <attr name="position" intvalue="1325"/>
+                <attr name="position" intvalue="2375"/>
             </file>
-            <file name="org-lorenzos-zencoding-ZenCodingAction.shadow">
-                <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-ZenCodingAction.instance"/>
-                <attr name="position" intvalue="1550"/>
+            <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
+                <attr name="position" intvalue="2350"/>
+            </file>
+            <file name="org-lorenzos-zencoding-actions-ZenCodingMatchPair.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-lorenzos-zencoding-actions-ZenCodingMatchPair.instance"/>
+                <attr name="position" intvalue="2362"/>
             </file>
         </folder>
     </folder>
     <folder name="Toolbars">
         <folder name="Clipboard">
-            <file name="org-lorenzos-zencoding-ZenCodingAction.shadow">
-                <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-ZenCodingAction.instance"/>
+            <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
                 <attr name="position" intvalue="400"/>
             </file>
         </folder>

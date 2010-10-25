@@ -1,10 +1,11 @@
 
-package org.lorenzos.zencoding;
+package org.lorenzos.zencoding.codegenerators;
 
 import java.util.Collections;
 import java.util.List;
 import javax.swing.text.JTextComponent;
 import org.lorenzos.utils.*;
+import org.lorenzos.zencoding.zeneditor.ZenEditor;
 import org.netbeans.spi.editor.codegen.CodeGenerator;
 import org.openide.util.Lookup;
 import ru.zencoding.JSExecutor;

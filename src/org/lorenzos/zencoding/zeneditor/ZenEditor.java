@@ -1,7 +1,8 @@
 
-package org.lorenzos.zencoding;
+package org.lorenzos.zencoding.zeneditor;
 
 import javax.swing.JEditorPane;
+import javax.swing.JOptionPane;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import javax.swing.text.JTextComponent;
@@ -128,7 +129,10 @@ public class ZenEditor implements IZenEditor {
 
 	@Override
 	public String prompt(String title) {
-		throw new UnsupportedOperationException("Not supported yet.");
+		return JOptionPane.showInputDialog(null,
+			"Enter Zen Coding abbreviation:",
+			"Wrap with Abbreviation",
+			JOptionPane.QUESTION_MESSAGE);
 	}
 
 	@Override
