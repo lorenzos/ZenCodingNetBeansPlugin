@@ -1,9 +1,9 @@
 Zen Coding NetBeans plugin
 ==========================
  
-Provide full support to HTML Zen code expanding in NetBeans.
+Provide full support to HTML/CSS Zen code expanding in NetBeans.
 
-**Download** plugin here: **[org-lorenzos-zencoding.nbm](http://github.com/downloads/lorenzos/ZenCodingNetBeansPlugin/org-lorenzos-zencoding-0.2.zip)**.
+**Download** plugin here: **[org-lorenzos-zencoding.nbm](http://github.com/downloads/lorenzos/ZenCodingNetBeansPlugin/org-lorenzos-zencoding-0.3.zip)**.
 
 ![Screenshot](http://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/screenshot.png)
 
@@ -18,6 +18,6 @@ Read more about Zen Coding:
 How to use
 ----------
 
-Fill a HTML code line with Zen syntax, then press the toolbar button or press Alt+Insert and choose Expand Zen Code.
+Fill a HTML/CSS code line with Zen syntax, then press the toolbar button or press Alt+Insert and choose Expand Zen Code.
 
-You can also setup a custom shortcut for the menu item in Source > Expand Zen code.
+You can also setup a custom shortcut for the menu item in Edit > Expand Zen code.
