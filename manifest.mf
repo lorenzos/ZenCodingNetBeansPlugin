@@ -2,5 +2,5 @@ Manifest-Version: 1.0
 OpenIDE-Module: org.lorenzos.zencoding
 OpenIDE-Module-Layer: org/lorenzos/zencoding/layer.xml
 OpenIDE-Module-Localizing-Bundle: org/lorenzos/zencoding/Bundle.properties
-OpenIDE-Module-Specification-Version: 0.1
+OpenIDE-Module-Specification-Version: 0.5
 
