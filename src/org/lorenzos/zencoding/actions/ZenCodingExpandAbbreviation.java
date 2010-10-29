@@ -1,7 +1,6 @@
 
 package org.lorenzos.zencoding.actions;
 
-import java.awt.Rectangle;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;

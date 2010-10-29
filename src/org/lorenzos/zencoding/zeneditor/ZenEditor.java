@@ -9,8 +9,10 @@ import javax.swing.text.Document;
 import javax.swing.text.JTextComponent;
 import org.lorenzos.utils.EditorUtilities;
 import org.lorenzos.utils.OutputUtils;
+import org.netbeans.api.lexer.TokenHierarchy;
+import org.netbeans.api.lexer.TokenSequence;
+import org.netbeans.modules.editor.indent.api.IndentUtils;
 import org.openide.cookies.EditorCookie;
-import org.openide.util.Exceptions;
 import ru.zencoding.IZenEditor;
 import ru.zencoding.SelectionData;
 
@@ -36,9 +38,7 @@ public class ZenEditor implements IZenEditor {
 
 	public static ZenEditor create(EditorCookie context) throws ZenEditorException {
 		for (JEditorPane pane : context.getOpenedPanes()) {
-			ZenEditor n = new ZenEditor(pane);
-			n.contentType = pane.getContentType();
-			return n; }
+			return new ZenEditor(pane); }
 		throw new ZenEditorException();
 	}
 
@@ -96,14 +96,30 @@ public class ZenEditor implements IZenEditor {
 	@Override
 	public void replaceContent(String value, int start, int end) {
 		try {
+			
+			// Indent string
 			value = EditorUtilities.stringIndent(value, this.getIndentation()).trim();
+
+			// Expand TAB to SPACES if required
+			if (IndentUtils.isExpandTabs(this.doc)) {
+				String indent = "";
+				for (int i = 0; i < IndentUtils.indentLevelSize(this.doc); i++) indent += " ";
+				value = value.replaceAll("\\t", indent);
+			}
+
+			// Manage placeholder
 			int placeholderPosition = value.length();
 			if (value.contains(ZenEditor.caretPlaceholder)) {
 				placeholderPosition = value.indexOf(ZenEditor.caretPlaceholder);
 				value = value.replace(ZenEditor.caretPlaceholder, ""); }
-			doc.remove(start, end - start);
-			doc.insertString(start, value, null);
+
+			// Replace content
+			this.doc.remove(start, end - start);
+			this.doc.insertString(start, value, null);
+
+			// Move caret
 			this.setCaretPos(start + placeholderPosition);
+
 		} catch (BadLocationException ex) {
 			ex.printStackTrace(OutputUtils.getErrorStream());
 		}
@@ -121,13 +137,13 @@ public class ZenEditor implements IZenEditor {
 
 	@Override
 	public String getSyntax() {
-		if (this.contentType != null) if (this.contentType.equals("text/x-css")) return "css";
+		if (this.getContentType().equals("text/x-css")) return "css";
 		return "html";
 	}
 
 	@Override
 	public String getProfileName() {
-		if (this.contentType != null) if (this.contentType.equals("text/x-css")) return "css";
+		if (this.getContentType().equals("text/x-css")) return "css";
 		return "xhtml";
 	}
 
@@ -153,27 +169,40 @@ public class ZenEditor implements IZenEditor {
 
 		try {
 
-			doc = textComp.getDocument();
-			caretPosition = textComp.getCaretPosition();
-			lineStart = caretPosition;
-			lineEnd = caretPosition;
+			// Init
+			this.doc = this.textComp.getDocument();
+			this.caretPosition = this.textComp.getCaretPosition();
+			this.lineStart = caretPosition;
+			this.lineEnd = caretPosition;
 			String cTemp;
 
+			// Get content type
+			TokenSequence tokenSequence = TokenHierarchy.get(this.doc).tokenSequence();
+			while (tokenSequence != null) {
+				tokenSequence.move(this.caretPosition - 1);
+				if (tokenSequence.moveNext()) {
+					this.setContentType(tokenSequence.language().mimeType());
+					tokenSequence = tokenSequence.embedded();
+				} else {
+					tokenSequence = null;
+				}
+			}
+
 			// Search for line start
-			if (lineStart > 0) {
-				cTemp = doc.getText(lineStart - 1, 1);
-				while (!cTemp.equals("\n") && !cTemp.equals("\r") && (lineStart > 0)) {
-					lineStart--;
-					if (lineStart > 0) cTemp = doc.getText(lineStart - 1, 1);
+			if (this.lineStart > 0) {
+				cTemp = this.doc.getText(this.lineStart - 1, 1);
+				while (!cTemp.equals("\n") && !cTemp.equals("\r") && (this.lineStart > 0)) {
+					this.lineStart--;
+					if (this.lineStart > 0) cTemp = this.doc.getText(this.lineStart - 1, 1);
 				}
 			}
 
 			// Search for line end
-			if (lineEnd < doc.getLength()) {
-				cTemp = doc.getText(lineEnd, 1);
+			if (this.lineEnd < this.doc.getLength()) {
+				cTemp = this.doc.getText(this.lineEnd, 1);
 				while (!cTemp.equals("\n") && !cTemp.equals("\r")) {
-					lineEnd++;
-					cTemp = doc.getText(lineEnd, 1);
+					this.lineEnd++;
+					cTemp = this.doc.getText(this.lineEnd, 1);
 				}
 			}
 
@@ -215,6 +244,14 @@ public class ZenEditor implements IZenEditor {
 
 	public void restoreInitialScrollingPosition() {
 		textComp.scrollRectToVisible(initialScrollingPosition);
+	}
+
+	public String getContentType() {
+		return contentType;
+	}
+
+	private void setContentType(String contentType) {
+		this.contentType = contentType;
 	}
 
 }
