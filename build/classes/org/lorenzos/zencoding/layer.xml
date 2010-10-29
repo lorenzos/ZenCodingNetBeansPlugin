@@ -6,7 +6,7 @@
             <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance">
                 <attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
                 <attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingExpandAbbreviation"/>
-                <attr name="iconBase" stringvalue="org/lorenzos/zencoding/actions/icon16.png"/>
+                <attr name="iconBase" stringvalue="org/lorenzos/zencoding/actions/icon.png"/>
                 <attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingExpandAbbreviation"/>
                 <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
                 <attr name="noIconInMenu" boolvalue="false"/>
@@ -48,9 +48,9 @@
                 <attr name="position" intvalue="2362"/>
             </file>
         </folder>
-        </folder>
+    </folder>
     <folder name="Toolbars">
-        <folder name="Clipboard">
+        <folder name="Edit">
             <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.shadow">
                 <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
                 <attr name="position" intvalue="400"/>
@@ -58,7 +58,7 @@
         </folder>
     </folder>
 	<folder name="Shortcuts">
-        <file name="D-COMMA.shadow">
+        <file name="D-O-N.shadow">
             <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
         </file>
         <file name="D-O-M.shadow">
