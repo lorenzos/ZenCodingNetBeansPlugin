@@ -149,10 +149,12 @@ public class ZenEditor implements IZenEditor {
 
 	@Override
 	public String prompt(String title) {
-		return JOptionPane.showInputDialog(null,
+		String response = JOptionPane.showInputDialog(null,
 			"Enter Zen Coding abbreviation:",
 			"Wrap with Abbreviation",
 			JOptionPane.QUESTION_MESSAGE);
+		if (response == null) return "";
+		return response;
 	}
 
 	@Override

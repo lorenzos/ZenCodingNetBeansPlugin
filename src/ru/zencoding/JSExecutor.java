@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import org.lorenzos.utils.OutputUtils;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Function;
@@ -16,7 +15,7 @@ public class JSExecutor {
 	private Scriptable scope;
 	private Reader fReader;
 	private boolean inited = false; 
-	private String fileName = "zencoding.js";
+	private String fileName = "zencoding-java.js";
 
 	private JSExecutor() {
 		inited = false;

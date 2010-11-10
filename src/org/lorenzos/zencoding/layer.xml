@@ -22,6 +22,24 @@
                 <attr name="selectionType" stringvalue="ANY"/>
                 <attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
             </file>
+            <file name="org-lorenzos-zencoding-actions-ZenCodingMergeLines.instance">
+                <attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+                <attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingMergeLines"/>
+                <attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingMergeLines"/>
+                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+                <attr name="noIconInMenu" boolvalue="false"/>
+                <attr name="selectionType" stringvalue="ANY"/>
+                <attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+            </file>
+            <file name="org-lorenzos-zencoding-actions-ZenCodingWrapWithAbbreviation.instance">
+                <attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+                <attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingWrapWithAbbreviation"/>
+                <attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingWrapWithAbbreviation"/>
+                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+                <attr name="noIconInMenu" boolvalue="false"/>
+                <attr name="selectionType" stringvalue="ANY"/>
+                <attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+            </file>
         </folder>
     </folder>
     <folder name="Editors">
@@ -35,18 +53,29 @@
     </folder>
     <folder name="Menu">
         <folder name="Edit">
-            <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation-separatorAfter.instance">
-                <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
-                <attr name="position" intvalue="2375"/>
-            </file>
-            <file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.shadow">
-                <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
-                <attr name="position" intvalue="2350"/>
-            </file>
-            <file name="org-lorenzos-zencoding-actions-ZenCodingMatchPair.shadow">
-                <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingMatchPair.instance"/>
-                <attr name="position" intvalue="2362"/>
-            </file>
+			<folder name="Zen Coding">
+				<attr name="position" intvalue="2375"/>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation.instance"/>
+					<attr name="position" intvalue="1"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingMatchPair.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingMatchPair.instance"/>
+					<attr name="position" intvalue="2"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingWrapWithAbbreviation.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingWrapWithAbbreviation.instance"/>
+					<attr name="position" intvalue="3"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingMergeLines.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingMergeLines.instance"/>
+					<attr name="position" intvalue="4"/>
+				</file>
+			</folder>
+			<file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation-separatorAfter.instance">
+				<attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+				<attr name="position" intvalue="2375"/>
+			</file>
         </folder>
     </folder>
     <folder name="Toolbars">
@@ -63,6 +92,12 @@
         </file>
         <file name="D-O-M.shadow">
             <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingMatchPair.instance"/>
+        </file>
+        <file name="D-O-W.shadow">
+            <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingWrapWithAbbreviation.instance"/>
+        </file>
+        <file name="D-O-L.shadow">
+            <attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingMergeLines.instance"/>
         </file>
     </folder>
 </filesystem>
