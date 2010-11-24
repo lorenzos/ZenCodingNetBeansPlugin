@@ -5,7 +5,7 @@ Provide support to HTML/CSS Zen Coding in NetBeans.
 
 **Download** plugin here: **[org-lorenzos-zencoding-0.7.nbm](http://github.com/downloads/lorenzos/ZenCodingNetBeansPlugin/org-lorenzos-zencoding-0.7.nbm)**.
 
-![Screenshot](http://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/screenshot.png)
+![Screenshot](https://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/screenshot.png)
 
 How to use
 ----------
