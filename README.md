@@ -18,6 +18,8 @@ How to use
 
 **Merge Lines**: Select multiple lines, then press **`CTRL+ALT+L`** or go to menu *Edit > Zen Coding > Merge Lines*.
 
+Also available in the *Edit > Zen Coding* menu: **Remove Tag**, **Split/Join Tag**, **Toggle Comment**, **Evaluate Math Expression**, **Go to Next Edit Point** and **Go to Previous Edit Point**. These actions have not a default keyboard shortcut. You can edit NetBeans shortcuts in  *Tools > Options > Keymap*.
+
 Installation
 ------------
 
