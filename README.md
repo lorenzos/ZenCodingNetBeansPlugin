@@ -32,7 +32,7 @@ About Zen Coding
 --------------------------
 
 - [Zen Coding homepage](http://code.google.com/p/zen-coding/)
-- [Current features of abbreviation engine](http://code.google.com/p/zen-coding/#Current_features_of_abbreviation_engine)
+- [Features of abbreviation engine](http://code.google.com/p/zen-coding/#Current_features_of_abbreviation_engine), [Zen Coding 0.7 new features](https://github.com/sergeche/zen-coding/wiki/Release-Notes)
 - [Selectors syntax](http://code.google.com/p/zen-coding/wiki/ZenHTMLSelectorsEn)
 - [List of available filters](http://code.google.com/p/zen-coding/wiki/Filters#List_of_available_filters)
 
