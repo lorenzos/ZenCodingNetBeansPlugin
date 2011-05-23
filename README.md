@@ -10,13 +10,13 @@ Provide support to HTML/CSS Zen Coding in NetBeans.
 How to use
 ----------
 
-**Expand abbreviation**: Fill a HTML/CSS code line with Zen syntax, then press `**CTRL+ALT+N**`, or click the toolbar button, or go to menu *Edit > Zen Coding > Expand Zen code*, or press `Alt+Insert` and choose *Expand Zen Code*.
+**Expand abbreviation**: Fill a HTML/CSS code line with Zen syntax, then press `CTRL+ALT+N`, or click the toolbar button, or go to menu *Edit > Zen Coding > Expand Zen code*, or press `Alt+Insert` and choose *Expand Zen Code*.
 
-**Match Pair**: Just press **`CTRL+ALT+M`** or go to menu *Edit > Zen Coding > Match Pair*.
+**Match Pair**: Just press `CTRL+ALT+M` or go to menu *Edit > Zen Coding > Match Pair*.
 
-**Wrap with Abbreviation**: Select something, press **`CTRL+ALT+W`** or go to menu *Edit > Zen Coding > Wrap with Abbreviation*, then insert a Zen code abbreviation in the input popup.
+**Wrap with Abbreviation**: Select something, press `CTRL+ALT+W` or go to menu *Edit > Zen Coding > Wrap with Abbreviation*, then insert a Zen code abbreviation in the input popup.
 
-**Merge Lines**: Select multiple lines, then press **`CTRL+ALT+L`** or go to menu *Edit > Zen Coding > Merge Lines*.
+**Merge Lines**: Select multiple lines, then press `CTRL+ALT+L` or go to menu *Edit > Zen Coding > Merge Lines*.
 
 Also available in the *Edit > Zen Coding* menu: **Remove Tag**, **Split/Join Tag**, **Toggle Comment**, **Evaluate Math Expression**, **Go to Next Edit Point** and **Go to Previous Edit Point**. These actions have not a default keyboard shortcut. You can edit NetBeans shortcuts in  *Tools > Options > Keymap*.
 
