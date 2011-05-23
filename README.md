@@ -10,7 +10,7 @@ Provide support to HTML/CSS Zen Coding in NetBeans.
 How to use
 ----------
 
-**Expand abbreviation**: Fill a HTML/CSS code line with Zen syntax, then press ** `CTRL+ALT+N` **, or click the toolbar button, or go to menu *Edit > Zen Coding > Expand Zen code*, or press `Alt+Insert` and choose *Expand Zen Code*.
+**Expand abbreviation**: Fill a HTML/CSS code line with Zen syntax, then press `**CTRL+ALT+N**`, or click the toolbar button, or go to menu *Edit > Zen Coding > Expand Zen code*, or press `Alt+Insert` and choose *Expand Zen Code*.
 
 **Match Pair**: Just press **`CTRL+ALT+M`** or go to menu *Edit > Zen Coding > Match Pair*.
 
