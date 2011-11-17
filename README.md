@@ -28,6 +28,8 @@ Installation
 3. Select tab *Downloaded*, click *Add plugins...* and search for downloaded **nbm** file.
 4. Click *Install* button, follow instructions and restart NetBeans IDE.
 
+If you find any bug or defect, report it to me **[here](https://github.com/lorenzos/ZenCodingNetBeansPlugin/issues)**.
+
 About Zen Coding
 --------------------------
 
