@@ -1655,8 +1655,8 @@ var zen_coding = (function(){
 
 		profiles = {},
 		default_profile = {
-			tag_case: 'lower',
-			attr_case: 'lower',
+			/** tag_case: 'lower', // Auto-lowercase disabled for https://github.com/lorenzos/ZenCodingNetBeansPlugin/issues/9 **/
+			/** attr_case: 'lower', // Auto-lowercase disabled for https://github.com/lorenzos/ZenCodingNetBeansPlugin/issues/9 **/
 			attr_quotes: 'double',
 
 			// each tag on new line
