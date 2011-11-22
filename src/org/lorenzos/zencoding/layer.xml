@@ -103,6 +103,15 @@
 				<attr name="selectionType" stringvalue="ANY"/>
 				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
 			</file>
+			<file name="org-lorenzos-zencoding-actions-ZenCodingIncrementBy1.instance">
+				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingIncrementBy1"/>
+				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingIncrementBy1"/>
+				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+				<attr name="noIconInMenu" boolvalue="false"/>
+				<attr name="selectionType" stringvalue="ANY"/>
+				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+			</file>
         </folder>
     </folder>
     <folder name="Editors">
@@ -161,6 +170,10 @@
 				<file name="org-lorenzos-zencoding-actions-ZenCodingGoToPreviousEditPoint.shadow">
 					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingGoToPreviousEditPoint.instance"/>
 					<attr name="position" intvalue="11"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingIncrementBy1.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingIncrementBy1.instance"/>
+					<attr name="position" intvalue="12"/>
 				</file>
 			</folder>
 			<file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation-separatorAfter.instance">
