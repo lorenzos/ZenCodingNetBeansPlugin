@@ -40,8 +40,8 @@ Also available in the *Edit > Zen Coding* menu:
  * **Split/Join Tag**
  * **Toggle Comment**
  * **Evaluate Math Expression**
- * **Go to Next Edit Point**
- * **Go to Previous Edit Point**
+ * **Go to Next / Previous Edit Point**
+ * **Increment / Decrement number by 1 / 10 / 0.1**
 
 These actions have not a default keyboard shortcut. You can edit NetBeans shortcuts in  *Tools > Options > Keymap*.
 
@@ -54,7 +54,8 @@ About Zen Coding
 ----------------
 
 - [Zen Coding homepage](http://code.google.com/p/zen-coding/)
-- [Features of abbreviation engine](http://code.google.com/p/zen-coding/#Current_features_of_abbreviation_engine), [Zen Coding 0.7 new features](https://github.com/sergeche/zen-coding/wiki/Release-Notes)
+- [Features of abbreviation engine](http://code.google.com/p/zen-coding/#Current_features_of_abbreviation_engine)
+- [Zen Coding 0.7 new features](https://github.com/sergeche/zen-coding/wiki/Release-Notes)
 - [Selectors syntax](http://code.google.com/p/zen-coding/wiki/ZenHTMLSelectorsEn)
 - [List of available filters](http://code.google.com/p/zen-coding/wiki/Filters#List_of_available_filters)
 
