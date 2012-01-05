@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import javax.swing.text.JTextComponent;
+import javax.swing.text.StyledDocument;
 import org.lorenzos.utils.EditorUtilities;
 import org.lorenzos.utils.OutputUtils;
 import org.netbeans.api.lexer.TokenHierarchy;
@@ -45,7 +46,11 @@ public class ZenEditor implements IZenEditor {
 	public static ZenEditor create(JTextComponent textComp) throws ZenEditorException {
 		return new ZenEditor(textComp);
 	}
-	
+
+	public StyledDocument getDocument() {
+		return (StyledDocument)this.doc;
+	}
+
 	@Override
 	public SelectionData getSelectionRange() {
 		return new SelectionData(
@@ -170,7 +175,7 @@ public class ZenEditor implements IZenEditor {
 	private void setup() throws ZenEditorException {
 
 		try {
-
+			
 			// Init
 			this.doc = this.textComp.getDocument();
 			this.caretPosition = this.textComp.getCaretPosition();
