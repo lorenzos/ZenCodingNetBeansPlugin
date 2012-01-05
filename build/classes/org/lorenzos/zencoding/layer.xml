@@ -67,24 +67,6 @@
 				<attr name="selectionType" stringvalue="ANY"/>
 				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
 			</file>
-			<!-- <file name="org-lorenzos-zencoding-actions-ZenCodingEncodeDecodeDataURL.instance">
-				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
-				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingEncodeDecodeDataURL"/>
-				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingEncodeDecodeDataURL"/>
-				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
-				<attr name="noIconInMenu" boolvalue="false"/>
-				<attr name="selectionType" stringvalue="ANY"/>
-				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
-			</file> -->
-			<file name="org-lorenzos-zencoding-actions-ZenCodingEvaluateMathExpression.instance">
-				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
-				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingEvaluateMathExpression"/>
-				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingEvaluateMathExpression"/>
-				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
-				<attr name="noIconInMenu" boolvalue="false"/>
-				<attr name="selectionType" stringvalue="ANY"/>
-				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
-			</file>
 			<file name="org-lorenzos-zencoding-actions-ZenCodingGoToNextEditPoint.instance">
 				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
 				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingGoToNextEditPoint"/>
@@ -103,6 +85,15 @@
 				<attr name="selectionType" stringvalue="ANY"/>
 				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
 			</file>
+			<file name="org-lorenzos-zencoding-actions-ZenCodingEvaluateMathExpression.instance">
+				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingEvaluateMathExpression"/>
+				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingEvaluateMathExpression"/>
+				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+				<attr name="noIconInMenu" boolvalue="false"/>
+				<attr name="selectionType" stringvalue="ANY"/>
+				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+			</file>
 			<file name="org-lorenzos-zencoding-actions-ZenCodingIncrementBy1.instance">
 				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
 				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingIncrementBy1"/>
@@ -112,6 +103,60 @@
 				<attr name="selectionType" stringvalue="ANY"/>
 				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
 			</file>
+			<file name="org-lorenzos-zencoding-actions-ZenCodingDecrementBy1.instance">
+				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingDecrementBy1"/>
+				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingDecrementBy1"/>
+				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+				<attr name="noIconInMenu" boolvalue="false"/>
+				<attr name="selectionType" stringvalue="ANY"/>
+				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+			</file>
+			<file name="org-lorenzos-zencoding-actions-ZenCodingIncrementBy10.instance">
+				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingIncrementBy10"/>
+				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingIncrementBy10"/>
+				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+				<attr name="noIconInMenu" boolvalue="false"/>
+				<attr name="selectionType" stringvalue="ANY"/>
+				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+			</file>
+			<file name="org-lorenzos-zencoding-actions-ZenCodingDecrementBy10.instance">
+				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingDecrementBy10"/>
+				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingDecrementBy10"/>
+				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+				<attr name="noIconInMenu" boolvalue="false"/>
+				<attr name="selectionType" stringvalue="ANY"/>
+				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+			</file>
+			<file name="org-lorenzos-zencoding-actions-ZenCodingIncrementBy01.instance">
+				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingIncrementBy01"/>
+				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingIncrementBy01"/>
+				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+				<attr name="noIconInMenu" boolvalue="false"/>
+				<attr name="selectionType" stringvalue="ANY"/>
+				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+			</file>
+			<file name="org-lorenzos-zencoding-actions-ZenCodingDecrementBy01.instance">
+				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingDecrementBy01"/>
+				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingDecrementBy01"/>
+				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+				<attr name="noIconInMenu" boolvalue="false"/>
+				<attr name="selectionType" stringvalue="ANY"/>
+				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+			</file>
+			<!-- <file name="org-lorenzos-zencoding-actions-ZenCodingEncodeDecodeDataURL.instance">
+				<attr name="delegate" methodvalue="org.openide.awt.Actions.inject"/>
+				<attr name="displayName" bundlevalue="org.lorenzos.zencoding.actions.Bundle#CTL_ZenCodingEncodeDecodeDataURL"/>
+				<attr name="injectable" stringvalue="org.lorenzos.zencoding.actions.ZenCodingEncodeDecodeDataURL"/>
+				<attr name="instanceCreate" methodvalue="org.openide.awt.Actions.context"/>
+				<attr name="noIconInMenu" boolvalue="false"/>
+				<attr name="selectionType" stringvalue="ANY"/>
+				<attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+			</file> -->
         </folder>
     </folder>
     <folder name="Editors">
@@ -155,26 +200,46 @@
 					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingToggleComment.instance"/>
 					<attr name="position" intvalue="7"/>
 				</file>
-				<!-- <file name="org-lorenzos-zencoding-actions-ZenCodingEncodeDecodeDataURL.shadow">
-					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingEncodeDecodeDataURL.instance"/>
-					<attr name="position" intvalue="8"/>
-				</file> -->
-				<file name="org-lorenzos-zencoding-actions-ZenCodingEvaluateMathExpression.shadow">
-					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingEvaluateMathExpression.instance"/>
-					<attr name="position" intvalue="9"/>
-				</file>
 				<file name="org-lorenzos-zencoding-actions-ZenCodingGoToNextEditPoint.shadow">
 					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingGoToNextEditPoint.instance"/>
-					<attr name="position" intvalue="10"/>
+					<attr name="position" intvalue="8"/>
 				</file>
 				<file name="org-lorenzos-zencoding-actions-ZenCodingGoToPreviousEditPoint.shadow">
 					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingGoToPreviousEditPoint.instance"/>
-					<attr name="position" intvalue="11"/>
+					<attr name="position" intvalue="9"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingEvaluateMathExpression.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingEvaluateMathExpression.instance"/>
+					<attr name="position" intvalue="10"/>
 				</file>
 				<file name="org-lorenzos-zencoding-actions-ZenCodingIncrementBy1.shadow">
 					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingIncrementBy1.instance"/>
+					<attr name="position" intvalue="11"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingDecrementBy1.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingDecrementBy1.instance"/>
 					<attr name="position" intvalue="12"/>
 				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingIncrementBy10.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingIncrementBy10.instance"/>
+					<attr name="position" intvalue="13"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingDecrementBy10.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingDecrementBy10.instance"/>
+					<attr name="position" intvalue="14"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingIncrementBy01.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingIncrementBy01.instance"/>
+					<attr name="position" intvalue="15"/>
+				</file>
+				<file name="org-lorenzos-zencoding-actions-ZenCodingDecrementBy01.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingDecrementBy01.instance"/>
+					<attr name="position" intvalue="16"/>
+				</file>
+				<!-- <file name="org-lorenzos-zencoding-actions-ZenCodingEncodeDecodeDataURL.shadow">
+					<attr name="originalFile" stringvalue="Actions/XML/org-lorenzos-zencoding-actions-ZenCodingEncodeDecodeDataURL.instance"/>
+					<attr name="position" intvalue="17"/>
+				</file> -->
 			</folder>
 			<file name="org-lorenzos-zencoding-actions-ZenCodingExpandAbbreviation-separatorAfter.instance">
 				<attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>

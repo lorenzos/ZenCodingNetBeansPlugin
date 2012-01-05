@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.lorenzos.zencoding">
-    <module_version install_time="1321994818453" last="true" origin="installer" specification_version="0.8">
+    <module_version install_time="1325801274984" last="true" origin="installer" specification_version="0.9">
         <file crc="3439678833" name="config/Modules/org-lorenzos-zencoding.xml"/>
         <file crc="3257827443" name="modules/ext/js.jar"/>
-        <file crc="443768774" name="modules/org-lorenzos-zencoding.jar"/>
+        <file crc="604758369" name="modules/org-lorenzos-zencoding.jar"/>
     </module_version>
 </module>
