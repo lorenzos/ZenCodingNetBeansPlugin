@@ -22,7 +22,7 @@ var zen_settings = {
 	},
 
 	'css': {
-		'filters': 'html,css',
+		'filters': 'html,css,fc',
 		'snippets': {
 			"@i": "@import url(|);",
 			"@m": "@media print {\n\t|\n}",
