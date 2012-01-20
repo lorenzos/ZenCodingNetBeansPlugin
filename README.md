@@ -39,11 +39,11 @@ Also available in the *Edit > Zen Coding* menu:
  * **Remove Tag** 
  * **Split/Join Tag**
  * **Toggle Comment**
- * **Evaluate Math Expression**
  * **Go to Next / Previous Edit Point**
+ * **Evaluate Math Expression**
  * **Increment / Decrement number by 1 / 10 / 0.1**
 
-These actions have not a default keyboard shortcut. You can edit NetBeans shortcuts in  *Tools > Options > Keymap*.
+These actions have not a default keyboard shortcut. You can edit NetBeans shortcuts in  *Tools > Options > Keymap* (**[more](https://github.com/lorenzos/ZenCodingNetBeansPlugin/blob/master/KEYMAP.md)**).
 
 How to report bugs
 ------------------
