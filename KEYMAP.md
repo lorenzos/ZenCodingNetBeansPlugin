@@ -5,11 +5,11 @@ You can edit Zen Coding shortcuts in NetBeans if don't not like default ones.
 
 Open *Tools > Options* dialog from the NetBeans main menu **(1)** and select *KeyMap* tab **(2)**.
 
-![Screenshot](https://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/keymap-1.png)
+![Screenshot](https://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/keymap-1.jpg)
 
 Search for a Zen Coding action **(3, 4)**, double click it, type new shortcut on your keyboard **(5)** and then type *Enter*.
 
-![Screenshot](https://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/keymap-2.png)
+![Screenshot](https://github.com/lorenzos/ZenCodingNetBeansPlugin/raw/master/graphics/keymap-2.jpg)
 
 Click *Ok* on the option dialog and enjoy your customized shortcuts.
 
