@@ -10,6 +10,9 @@ Provide support to HTML/CSS Zen Coding in NetBeans.
 Installation
 ------------
 
+> **Warning:** It seems that the plugin does not work with NetBeans 7.2.  
+> So, please do not install *Zen Coding NetBeans plugin* on NetBeans 7.2. I'm working to make it compatible.
+
 1. **Download** the plugin **[here](http://github.com/downloads/lorenzos/ZenCodingNetBeansPlugin/org-lorenzos-zencoding-0.9.nbm)**.
 2. Open NetBeans IDE (6.9.1 or newer) and go to *Tools > Plugins*.
 3. Select tab *Downloaded*, click *Add plugins...* and search for downloaded **nbm** file.
