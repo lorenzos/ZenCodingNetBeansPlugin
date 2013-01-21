@@ -1,7 +1,7 @@
 How to customize Zen Coding shortcuts
 =====================================
  
-You can edit Zen Coding shortcuts in NetBeans if don't like default ones.
+You can edit Zen Coding shortcuts in NetBeans if you don't like default ones.
 
 Open *Tools > Options* dialog from the NetBeans main menu **(1)** and select *KeyMap* tab **(2)**.
 
