@@ -142,13 +142,21 @@ public class ZenEditor implements IZenEditor {
 
 	@Override
 	public String getSyntax() {
-		if (this.getContentType().equals("text/x-css")) return "css";
+		// NetBeans returns content type as 'text/x-css' before version 7.3 beta and returns 'text/css' from 7.3 beta
+		if (this.getContentType().equals("text/x-css") || this.getContentType().equals("text/css")) return "css";
+		if (this.getContentType().equals("text/x-scss") || this.getContentType().equals("text/scss")) return "scss";
+		if (this.getContentType().equals("text/x-sass") || this.getContentType().equals("text/sass")) return "sass";
+		if (this.getContentType().equals("text/x-lesscss") || this.getContentType().equals("text/lesscss")) return "less";
 		return "html";
 	}
 
 	@Override
 	public String getProfileName() {
-		if (this.getContentType().equals("text/x-css")) return "css";
+		// NetBeans returns content type as 'text/x-css' before version 7.3 beta and returns 'text/css' from 7.3 beta
+		if (this.getContentType().equals("text/x-css") || this.getContentType().equals("text/css")) return "css";
+		if (this.getContentType().equals("text/x-scss") || this.getContentType().equals("text/scss")) return "scss";
+		if (this.getContentType().equals("text/x-sass") || this.getContentType().equals("text/sass")) return "sass";
+		if (this.getContentType().equals("text/x-lesscss") || this.getContentType().equals("text/lesscss")) return "less";
 		return "xhtml";
 	}
 

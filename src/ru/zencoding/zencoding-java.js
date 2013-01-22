@@ -730,6 +730,18 @@ var zen_settings = {
 	'haml': {
 		'filters': 'haml',
 		'extends': 'html'
+	},
+
+	"scss": {
+		"extends": "css"
+	},
+
+	"sass": {
+		"extends": "css"
+	},
+
+	"less": {
+		"extends": "css"
 	}
 };/**
  * Parsed resources (snippets, abbreviations, variables, etc.) for Zen Coding.
