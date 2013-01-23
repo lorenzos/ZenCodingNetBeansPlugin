@@ -1,7 +1,7 @@
 Zen Coding NetBeans plugin
 ==========================
  
-Provides support to HTML/CSS Zen Coding in NetBeans.  
+Provides support to HTML/CSS **[Zen Coding](http://code.google.com/p/zen-coding/)** in NetBeans.  
 CSS abbreviations are expanded also in [SCSS](http://plugins.netbeans.org/plugin/34929/scss-support), [LessCSS](http://plugins.netbeans.org/plugin/32782/lesscss-module) and SASS files.
 
 **Download** the plugin here: **[org-lorenzos-zencoding-1.0.nbm](http://www.lorenzostanco.com/d/?d=org-lorenzos-zencoding-1.0.nbm)**.
