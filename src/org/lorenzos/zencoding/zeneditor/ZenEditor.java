@@ -4,6 +4,7 @@ package org.lorenzos.zencoding.zeneditor;
 import java.awt.Rectangle;
 import javax.swing.JEditorPane;
 import javax.swing.JOptionPane;
+import javax.swing.text.AbstractDocument;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import javax.swing.text.JTextComponent;
@@ -192,15 +193,21 @@ public class ZenEditor implements IZenEditor {
 			String cTemp;
 
 			// Get content type
-			TokenSequence tokenSequence = TokenHierarchy.get(this.doc).tokenSequence();
-			while (tokenSequence != null) {
-				tokenSequence.move(this.caretPosition - 1);
-				if (tokenSequence.moveNext()) {
-					this.setContentType(tokenSequence.language().mimeType());
-					tokenSequence = tokenSequence.embedded();
-				} else {
-					tokenSequence = null;
+			AbstractDocument abstractDoc = (AbstractDocument) doc;
+			abstractDoc.readLock();
+			try{
+				TokenSequence tokenSequence = TokenHierarchy.get(this.doc).tokenSequence();
+				while (tokenSequence != null) {
+					tokenSequence.move(this.caretPosition - 1);
+					if (tokenSequence.moveNext()) {
+						this.setContentType(tokenSequence.language().mimeType());
+						tokenSequence = tokenSequence.embedded();
+					} else {
+						tokenSequence = null;
+					}
 				}
+			} finally {
+				abstractDoc.readUnlock();
 			}
 
 			// Search for line start
