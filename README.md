@@ -1,6 +1,9 @@
 Zen Coding NetBeans plugin
 ==========================
- 
+
+> **This plugin is deprecated and not developed further.**  
+> Please use [Emmet for NetBeans](https://github.com/emmetio/netbeans) instead.
+
 Provides support to HTML/CSS **[Zen Coding](http://code.google.com/p/zen-coding/)** in NetBeans.  
 CSS abbreviations are expanded also in [SCSS](http://plugins.netbeans.org/plugin/34929/scss-support), [LessCSS](http://plugins.netbeans.org/plugin/32782/lesscss-module) and SASS files.
 
